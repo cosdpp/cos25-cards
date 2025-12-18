@@ -1,7 +1,566 @@
-<!doctype html><html><head><script src="/mysmartpage/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=mysmartpage/livereload" data-no-instant defer></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>MINIMUM VALUES TEST</title><meta name=description content="mySmartpage - TODO add description, like 'Mein/Unser Network-Portfolio'."><link rel=icon type=image/png sizes=96x96 href=../../favicons/favicon-96x96.png><link rel=icon type=image/svg+xml href=../../favicons/favicon.svg><link rel="shortcut icon" type=image/x-icon href=../../favicons/favicon.ico><link rel=apple-touch-icon type=image/png sizes=180x180 href=../../favicons/apple-touch-icon.png><link rel=manifest href=../../favicons/site.webmanifest><link rel=stylesheet href=../../css/vendor/bootstrap/bootstrap.min.css><link rel=stylesheet href=../../icons/font/bootstrap-icons.min.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel=stylesheet><style>a{color:inherit;text-decoration:underline}a:hover{color:inherit;text-decoration:none}body{background-color:#212529;font-family:open sans}button{border-radius:.75rem!important}h1{font-size:1.5rem}h2{font-size:1.25rem}h6{font-weight:400}.btn-lg{font-size:inherit}.container{border-bottom-left-radius:.75rem;border-bottom-right-radius:.75rem;max-width:540px}.modal-content{border-radius:1rem}.modal-header{border-bottom:1px solid #adb5bd}.modal-footer{border-top:1px solid #adb5bd}</style><style>.section{background-color:#fff;border-radius:1rem;padding:.75rem}.w-12{width:12rem}.qr-code{display:block;margin:auto;width:100%}</style><style>.banner{background-color:#212529;margin-left:-16px;margin-right:-16px;margin-bottom:-5rem}.banner img{border-top-left-radius:.75rem;border-top-right-radius:.75rem;width:100%}.btn-facebook{background-color:#1877f2;border-color:#1877f2;color:#fff}.btn-facebook:hover{background-color:#135fc2;border-color:#135fc2;color:#fff}.btn-github{background-color:#fff;border-color:#000;color:#000}.btn-github:hover{background-color:#ccc;border-color:#000;color:#000}.btn-instagram{background:linear-gradient(to right,#ffd600,#ff0069,#7638fa);border-color:#fff;color:#fff}.btn-instagram:hover{background:linear-gradient(to right,#ff7a00,#ff0069,#d300c5);border-color:#fff;color:#fff}.btn-linkedin{background-color:#0077b5;border-color:#0077b5;color:#fff}.btn-linkedin:hover{background-color:#005f91;border-color:#005f91;color:#fff}.btn-tiktok{background-color:#fff;border-color:#000;color:#000}.btn-tiktok:hover{background-color:#ccc;border-color:#000;color:#000}.btn-twitter-x{background-color:#000;border-color:#000;color:#fff}.btn-twitter-x:hover{background-color:#333;border-color:#333;color:#fff}.btn-vimeo{background-color:#141a20;border-color:#141a20;color:#fff}.btn-vimeo:hover{background-color:#333;border-color:#333;color:#fff}.btn-whatsapp{background-color:#25d366;border-color:#25d366;color:#fff}.btn-whatsapp:hover{background-color:#1ea952;border-color:#1ea952;color:#fff}.btn-youtube{background-color:#f03;border-color:#f03;color:#fff}.btn-youtube:hover{background-color:#cc0029;border-color:#cc0029;color:#fff}.carousel img{border-radius:1rem}.contact ul{list-style:none;padding-left:1rem}.contact ul li{margin-top:1rem}.hero img{aspect-ratio:1;border-radius:50%;float:right;margin-top:-4rem;margin-right:.5rem;width:6.5rem}.links a,.socials a{border-radius:4rem!important;text-decoration:none}.socials a{position:relative}.socials a i{left:.9rem;position:absolute}.video-facebook{aspect-ratio:16/9;border-radius:1rem;width:100%}.video-vimeo{aspect-ratio:16/9;border-radius:1rem;width:100%}.video-youtube{aspect-ratio:16/9;border-radius:1rem;width:100%}</style><script>window.onTestClick=function(t){t.style.color="red"},window.onTodoButtonClick=function(t){let n="Button without message was clicked.";t!=null&&(n=`Button with link "${t}" was clicked.`),console.log(n),alert(n)}</script></head><body><style>.container{background-color:#1d2124}</style><div class="container pb-3"><div class="row mt-3"><div class=col><iframe class=video-youtube src=https://www.youtube-nocookie.com/embed/xvFZjo5PgG0 title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe></div></div><script>window.onCopyUrlButtonClick=function(t,n){try{navigator.clipboard.writeText(n)}catch(e){console.error(e.message)}t.innerHTML=`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Yannik Rauter</title>
+    
+      <meta name="description" content="mySmartpage - TODO add description, like 'Mein/Unser Network-Portfolio'.">
+    
+
+    <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="../../favicons/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicons/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../../favicons/site.webmanifest">
+
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    
+
+
+    
+      <style>/*
+ * Smartpage Bootstrap Modifications CSS
+ */
+
+
+
+/* Tags */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #212529;
+  font-family: "Open Sans";
+}
+
+button {
+  border-radius: .75rem !important;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-weight: normal;
+}
+
+
+
+/* Classes */
+.btn-lg {
+  font-size: inherit;
+}
+
+.container {
+  border-bottom-left-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+
+  max-width: 540px;
+
+  /* padding-left: 8px;
+  padding-right: 8px;
+
+  overflow-x: clip; */
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  border-bottom: 1px solid #adb5bd;
+}
+.modal-footer {
+  border-top: 1px solid #adb5bd;
+}
+</style>
+    
+    
+      <style>/*
+ * Smartpage Main CSS
+ */
+
+
+
+/* Tags */
+
+
+
+/* Classes */
+.section {
+  background-color: #ffffff;
+  border-radius: 1rem;
+
+  padding: .75rem;
+}
+
+.w-12 {
+  width: 12rem;
+}
+
+.qr-code {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+</style>
+    
+    
+      <style>/*
+ * Smartpage Sections CSS
+ */
+
+
+
+/* Tags */
+
+
+
+/* Classes */
+.banner {
+  background-color: #212529;
+  /* background-color: #1d2124; */
+
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -5rem;
+}
+.banner img {
+  border-top-left-radius: .75rem;
+  border-top-right-radius: .75rem;
+
+  width: 100%;
+}
+
+.btn-facebook {
+  background-color: #1877f2;
+  border-color: #1877f2;
+  color: #fff;
+}
+.btn-facebook:hover {
+  background-color: #135fc2;
+  border-color: #135fc2;
+  color: #fff;
+}
+.btn-github {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+.btn-github:hover {
+  background-color: #cccccc;
+  border-color: #000;
+  color: #000;
+}
+.btn-instagram {
+  background: linear-gradient(to right, #ffd600, #ff0069, #7638fa);
+  /* background: linear-gradient(to right, #ffd600, #ff7a00, #ff0069, #d300c5, #7638fa); */
+  border-color: #fff;
+  color: #fff;
+}
+.btn-instagram:hover {
+  background: linear-gradient(to right, #ff7a00, #ff0069, #d300c5);
+  border-color: #fff;
+  color: #fff;
+}
+.btn-linkedin {
+  background-color: #0077b5;
+  border-color: #0077b5;
+  color: #fff;
+}
+.btn-linkedin:hover {
+  background-color: #005f91;
+  border-color: #005f91;
+  color: #fff;
+}
+.btn-tiktok {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+.btn-tiktok:hover {
+  background-color: #cccccc;
+  border-color: #000;
+  color: #000;
+}
+.btn-twitter-x {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+.btn-twitter-x:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: #fff;
+}
+.btn-vimeo {
+  background-color: #141a20;
+  border-color: #141a20;
+  color: #fff;
+}
+.btn-vimeo:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: #fff;
+}
+.btn-whatsapp {
+  background-color: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background-color: #1ea952;
+  border-color: #1ea952;
+  color: #fff;
+}
+.btn-youtube {
+  background-color: #ff0033;
+  border-color: #ff0033;
+  color: #fff;
+}
+.btn-youtube:hover {
+  background-color: #cc0029;
+  border-color: #cc0029;
+  color: #fff;
+}
+
+.carousel img {
+  border-radius: 1rem;
+}
+
+.contact ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+.contact ul li {
+  margin-top: 1rem;
+}
+
+.hero img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  float: right;
+  margin-top: -4rem;
+  margin-right: .5rem;
+  width: 6.5rem;
+}
+
+.links a, .socials a {
+  border-radius: 4rem !important;
+  text-decoration: none;
+}
+.socials a {
+  position: relative;
+}
+.socials a i {
+  left: .9rem;
+  position: absolute;
+}
+
+.video-facebook {
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  width: 100%;
+}
+.video-vimeo {
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  width: 100%;
+}
+.video-youtube {
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  width: 100%;
+}
+</style>
+    
+
+    
+      <script>/*
+ * Main JS
+ */
+
+
+
+// Imports go here
+
+// const testVariable = null;
+
+// TODO jQuery doesn't work when embedding CSS using Hugo, because jQuery is loaded later.
+// $(document).ready(function () {
+
+//   // testFunction();
+// });
+
+// function testFunction() {
+
+//   const testElement = document.getElementById("test-id");
+//   testElement.style.color = "blue";
+// }
+
+window.onTestClick = function onTestClick(testElement) {
+
+  testElement.style.color = "red";
+}
+
+window.onTodoButtonClick = function onTodoButtonClick(buttonMessage) {
+
+  let messageText = "Button without message was clicked.";
+
+  if (buttonMessage != undefined) {
+    messageText = `Button with link "${buttonMessage}" was clicked.`;
+  }
+
+  console.log(messageText);
+  alert(messageText);
+}
+</script>
+    
+  </head>
+
+  <body>
+
+    
+
+  
+
+
+
+
+
+<style>
+  .container {
+    background-color: #1d2124;
+  }
+  
+</style>
+
+
+  <div class="container pb-3">
+
+    
+
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+        <div class="row mt-3">
+  <div class="col">
+    
+      
+        
+        
+        
+        <iframe
+          class="video-youtube"
+          src='https://www.youtube-nocookie.com/embed/xvFZjo5PgG0'
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      
+    
+  </div>
+</div>
+
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      <script>
+  window.onCopyUrlButtonClick = function onCopyUrlButtonClick(copyUrlButton, url) {
+
+    try {
+      navigator.clipboard.writeText(url);
+    } catch (error) {
+      console.error(error.message);
+    }
+
+    copyUrlButton.innerHTML = `
       <i class="bi bi-clipboard-check pr-2"></i>Link kopiert!
-    `},window.onSharePageButtonClick=function(t){let n="mySmartpage - TODO add description, like 'Mein/Unser Network-Portfolio'.";const s={title:"MINIMUM VALUES TEST",text:n,url:t};invokeShare(s)},window.onShowQrCodeButtonClick=function(){$("#qr-code-modal").modal()};async function invokeShare(e){try{await navigator.share(e)}catch(e){e instanceof TypeError&&$("#share-modal").modal()}}</script><div class="modal fade" id=qr-code-modal tabindex=-1><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h5 class=modal-title>QR Code zum Teilen der Smartpage</h5><button class=close type=button data-dismiss=modal>
-<i class="bi bi-x h4"></i></button></div><div class=modal-body><div class=row><div class=col><p class="text-center text-danger mt-3">Beim Anzeigen des QR-Codes ist ein Fehler aufgetreten.</p></div></div></div><div class=modal-footer><button class="btn btn-secondary" type=button data-dismiss=modal>Schließen</button></div></div></div></div><div class="modal fade" id=share-modal tabindex=-1><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h2 class=modal-title>Smartpage teilen</h2><button class=close type=button data-dismiss=modal>
-<i class="bi bi-x h4"></i></button></div><div class=modal-body><div class=row><div class="col text-center"><p class="text-center text-danger mt-3">Beim Anzeigen des Links ist ein Fehler aufgetreten.</p></div></div></div><div class=modal-footer><button class="btn btn-secondary" type=button data-dismiss=modal>Schließen</button></div></div></div></div><div class="row mt-3"><div class="col pr-2"><button class="btn btn-light btn-block btn-lg" type=button onclick=onShowQrCodeButtonClick() disabled>
-<i class="bi bi-qr-code pr-1"></i>QR Code anzeigen</button></div><div class="col pl-2"><button class="btn btn-light btn-block btn-lg" type=button onclick='onSharePageButtonClick("URL_DEFAULT_VALUE")' disabled>
-<i class="bi bi-box-arrow-up pr-1"></i>Smartpage teilen</button></div></div></div><footer class="text-center text-light mt-1 mb-2"><small><span title='Thu 18 Dec 2025 at 14:41:43 CET'>&copy; 2025</span> <a href=../../>mySmartpage</a> | <a href=../../imprint>Impressum</a> | <a href=../../privacy-policy>Datenschutzerklärung</a></small></footer><script src=../../js/vendor/jquery/jquery-3.7.1.slim.min.js></script><script src=../../js/vendor/bootstrap/bootstrap.bundle.min.js></script></body></html>
+    `;
+  }
+
+  window.onSharePageButtonClick = function onSharePageButtonClick(url) {
+
+    let description = "mySmartpage - TODO add description, like 'Mein/Unser Network-Portfolio'.";
+    
+
+    const shareData = {
+      title: "MINIMUM VALUES TEST",
+      text: description,
+      url: url,
+    };
+
+    invokeShare(shareData);
+  }
+
+  window.onShowQrCodeButtonClick = function onShowQrCodeButtonClick() {
+    $("#qr-code-modal").modal();
+  }
+
+  async function invokeShare(shareData) {
+
+    try {
+
+      await navigator.share(shareData);
+    } catch (error) {
+
+      
+
+      if (error instanceof TypeError) {
+        $("#share-modal").modal();
+      }
+    }
+  }
+</script>
+
+
+<div class="modal fade" id="qr-code-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">QR Code zum Teilen der Smartpage</h5>
+        <button class="close" type="button" data-dismiss="modal">
+          <i class="bi bi-x h4"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        
+        <div class="row">
+          <div class="col">
+            
+            
+              
+                
+                <p class="text-center text-danger mt-3">
+                  Beim Anzeigen des QR-Codes ist ein Fehler aufgetreten.
+                </p>
+              
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="share-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Smartpage teilen</h2>
+        <button class="close" type="button" data-dismiss="modal">
+          <i class="bi bi-x h4"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        
+        <div class="row">
+          <div class="col text-center">
+            
+              <p class="text-center text-danger mt-3">
+                Beim Anzeigen des Links ist ein Fehler aufgetreten.
+              </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col pr-2">
+    
+    
+      
+    
+    <button class="btn btn-light btn-block btn-lg" type="button" onclick="onShowQrCodeButtonClick()" disabled>
+      <i class="bi bi-qr-code pr-1"></i>QR Code anzeigen
+    </button>
+  </div>
+  <div class="col pl-2">
+    
+    
+      
+    
+    <button class="btn btn-light btn-block btn-lg" type="button" onclick="onSharePageButtonClick(&#34;URL_DEFAULT_VALUE&#34;)" disabled>
+      <i class="bi bi-box-arrow-up pr-1"></i>Smartpage teilen
+    </button>
+  </div>
+</div>
+
+
+      
+
+    
+
+  </div>
+
+
+    
+
+    <footer class="text-center text-light mt-1 mb-2">
+      <small>
+        <span title='Thu 18 Dec 2025 at 20:09:47 CET'>&copy; 2025</span> <a href="../../">mySmartpage</a> | <a href="../../imprint">Impressum</a> | <a href="../../privacy-policy">Datenschutzerklärung</a>
+      </small>
+    </footer>
+
+    
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
