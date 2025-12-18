@@ -1,0 +1,89 @@
+
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+    color: #000;
+    background-color: #f5f5f5;
+    margin-left: 5%;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ee7f4f;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+    margin-right: 20px;
+}
+
+nav a:hover {
+	color: #ee7f4f;
+}
+
+#uebermich img {
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
+}
+
+nav {
+    margin-bottom: 60px;
+}
+
+footer {
+    margin-top: 60px;
+    border-top: 1px solid #ee7f4f;
+    padding-top: 20px;
+}
+
+footer i {
+    color: #ee7f4f;
+}
+
+#kontakt i {
+    color: #ee7f4f;
+    margin-right: 10px;
+}
+
+#kontakt a {
+	color: #000;
+}
+
+#kontakt a:hover {
+	color: #ee7f4f;
+}
+
+.portfolio-button {
+    padding: 12px 24px;
+    border: 1px solid #ee7f4f;
+    color: #ee7f4f;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.portfolio-button:hover {
+    background-color: #ee7f4f;
+    color: #fff;
+}
