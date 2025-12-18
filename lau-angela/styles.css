@@ -38,10 +38,15 @@ table {
 table, th, td {
   border: 1px solid #ddd;
 }
+
 th, td {
   padding: 8px;
   text-align: left;
 }
+
+thth {
+  font-weight: 700;
+
 ul {
   list-style-type: circle;
   list-style: inside;
