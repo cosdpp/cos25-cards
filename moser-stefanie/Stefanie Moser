@@ -1,1 +1,446 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Card – Stefanie Moser</title>
+
+  <style>
+    :root{
+      /* Grundfarben */
+      --bg:#F4EDE6;
+      --card:#F8F2EC;
+      --paper:#FFFDFB;
+
+      /* Text */
+      --text:#2F2926;
+      --muted:#5E5450;
+
+      /* Einheitlicher Akzent (kontraststärker) */
+      --accent:#9E6E6E;
+      --accent-hover:#855A5A;
+      --accent-bg:#F0DADA;
+
+      /* Linien & Schatten */
+      --line:rgba(47,41,38,.12);
+      --shadow:0 18px 55px rgba(47,41,38,.22);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:32px;
+      background:
+        radial-gradient(1200px 700px at 18% 12%, rgba(158,110,110,.25), transparent 55%),
+        radial-gradient(900px 550px at 82% 80%, rgba(120,105,98,.18), transparent 60%),
+        var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+    }
+
+    .card{
+      width:min(1120px, 100%);
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.4));
+    }
+
+    .wrap{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+    }
+    @media (max-width:980px){
+      .wrap{grid-template-columns:1fr}
+    }
+
+    .left,.right{padding:28px}
+
+    .left{
+      background:linear-gradient(180deg, rgba(248,242,236,.98), rgba(240,218,218,.6));
+      border-right:1px solid var(--line);
+    }
+    @media (max-width:980px){
+      .left{border-right:0;border-bottom:1px solid var(--line)}
+    }
+
+    .right{
+      background:linear-gradient(180deg, rgba(255,253,251,.95), rgba(248,242,236,.8));
+    }
+
+    /* Header */
+    .top{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .avatar{
+      width:112px;
+      height:112px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid var(--accent);
+      box-shadow:0 10px 25px rgba(47,41,38,.15);
+      background:var(--paper);
+      flex:0 0 auto;
+    }
+
+    .titleblock{
+      display:grid;
+      gap:6px;
+      min-width:0;
+    }
+
+    h1{
+      margin:0;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.02em;
+      color:var(--text);
+    }
+
+    .role{
+      margin:0;
+      font-size:14.5px;
+      color:var(--muted);
+    }
+
+    .quote{
+      margin:14px 0 0;
+      padding:14px 16px;
+      background:var(--accent-bg);
+      border:1px solid rgba(158,110,110,.45);
+      border-left:4px solid var(--accent);
+      border-radius:16px;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .divider{
+      height:1px;
+      background:var(--line);
+      margin:18px 0;
+    }
+
+    .section{margin:14px 0 0}
+    .section + .section{margin-top:18px}
+
+    .section-title{
+      font-size:11.5px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin:0 0 10px;
+    }
+    .section-title::after{
+      content:"";
+      flex:1;
+      height:1px;
+      background:linear-gradient(90deg, rgba(47,41,38,.18), transparent);
+    }
+
+    /* Cards */
+    .item{
+      background:rgba(255,253,251,.9);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:0 10px 30px rgba(47,41,38,.08);
+    }
+    .item + .item{margin-top:12px}
+
+    .head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .who{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      min-width:0;
+    }
+
+    .when{
+      font-size:12.5px;
+      color:var(--muted);
+      white-space:nowrap;
+      padding-top:2px;
+    }
+
+    /* Buttons – einheitlich */
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      min-width:0;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12.5px;
+      color:#ffffff;
+      background:var(--accent);
+      border:1px solid var(--accent);
+      text-decoration:none;
+      white-space:nowrap;
+      transition:transform .08s ease, background .12s ease, box-shadow .12s ease;
+      max-width:100%;
+      min-width:0;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      background:var(--accent-hover);
+      box-shadow:0 6px 14px rgba(0,0,0,.2);
+    }
+
+    .btn.link::after{
+      content:"↗";
+      font-size:12px;
+      opacity:.8;
+    }
+
+    /* Mobile */
+    @media (max-width:560px){
+      .btn{
+        white-space:normal;
+        overflow-wrap:anywhere;
+        line-height:1.15;
+      }
+      .btn.link::after{ margin-left:2px; }
+    }
+
+    .footer{
+      padding:14px 28px 18px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(248,242,236,.9);
+    }
+  </style>
+</head>
+
+<body>
+<article class="card">
+  <div class="wrap">
+
+    <!-- LEFT -->
+    <section class="left">
+      <div class="top">
+        <img src="Stefanie Moser.jpeg" alt="Profilbild Stefanie Moser" class="avatar">
+        <div class="titleblock">
+          <h1>Stefanie Moser, BA</h1>
+          <p class="role">Digital Marketing &amp; E-Commerce · Content Strategy Studentin</p>
+        </div>
+      </div>
+
+      <p class="quote">
+        „Ich verbinde Strategie und Umsetzung – und mache digitale Touchpoints messbar besser: von Content über SEO bis E-Commerce.“
+      </p>
+
+      <div class="divider"></div>
+
+      <!-- Kontakt -->
+      <div class="section">
+        <h3 class="section-title">Kontakt</h3>
+        <div class="chips">
+          <a class="btn" href="tel:+436646491307">Tel · 0664 / 6491307</a>
+          <a class="btn" href="mailto:stefaniesteiner@hotmail.com">Mail · stefaniesteiner@hotmail.com</a>
+          <span class="btn">Graz · Österreich</span>
+        </div>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="section">
+        <h3 class="section-title">Work Experience</h3>
+
+        <div class="item">
+          <div class="head">
+            <div class="who">
+              <a class="btn link" href="https://wutscher.com/" target="_blank" rel="noopener">sehen!wutscher</a>
+              <span class="btn">E-Commerce</span>
+              <span class="btn">Online Marketing</span>
+            </div>
+            <div class="when">11/2024 – Heute</div>
+          </div>
+          <div class="chips">
+            <span class="btn">Onlineshop</span>
+            <span class="btn">Website</span>
+            <span class="btn">Shopware</span>
+            <span class="btn">PIM</span>
+            <span class="btn">Local SEO & Google Business Profiles</span>
+            <span class="btn">SEO</span>
+            <span class="btn">SEA</span>
+            <span class="btn">Social Media</span>
+            <span class="btn">Partnermanagement</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="head">
+            <div class="who">
+              <a class="btn link" href="https://ideentriebwerk.com/" target="_blank" rel="noopener">Ideentriebwerk</a>
+              <span class="btn">Head of Marketing</span>
+              <span class="btn">Ehrenamt</span>
+            </div>
+            <div class="when">02/2025 – Heute</div>
+          </div>
+          <div class="chips">
+            <span class="btn">Brand</span>
+            <span class="btn">Strategie</span>
+            <span class="btn">SEO</span>
+            <span class="btn">Website</span>
+            <span class="btn">Social</span>
+            <span class="btn">Newsletter</span>
+            <span class="btn">Teamleader of 5</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="head">
+            <div class="who">
+              <a class="btn link" href="https://www.fronius.com/de/solarenergie/eigenheim" target="_blank" rel="noopener">Fronius</a>
+              <span class="btn">Digital Marketing</span>
+              <span class="btn">Solar Energy</span>
+            </div>
+            <div class="when">03/2019 – 10/2024</div>
+          </div>
+          <div class="chips">
+            <span class="btn">Websites</span>
+            <span class="btn">Microsites</span>
+            <span class="btn">Landingpages</span>
+            <span class="btn">SEO</span>
+            <span class="btn">PIM</span>
+            <span class="btn">CMS</span>
+            <span class="btn">SharePoint</span>
+            <span class="btn">Website-Relaunches</span>
+            <span class="btn">Blog</span>
+            <span class="btn">Events</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expertise -->
+      <div class="section">
+        <h3 class="section-title">Expertise</h3>
+        <div class="chips">
+          <span class="btn">SEO</span>
+          <span class="btn">SEA</span>
+          <span class="btn">Shopware</span>
+          <span class="btn">PIM</span>
+          <span class="btn">Produktdaten</span>
+          <span class="btn">Sitecore</span>
+          <span class="btn">Analytics</span>
+          <span class="btn">Content Creation</span>
+          <span class="btn">Social Media</span>
+          <span class="btn">Brevo & Mailchimp</span>
+          <span class="btn">MS Office</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="right">
+
+      <!-- Ausbildung -->
+      <div class="section">
+        <h3 class="section-title">Ausbildung</h3>
+
+        <div class="item">
+          <div class="head">
+            <div class="who">
+              <a class="btn link" href="https://www.fh-joanneum.at/content-strategie-und-digitale-kommunikation/master/" target="_blank" rel="noopener">FH JOANNEUM</a>
+              <span class="btn">Master</span>
+              <span class="btn">Content Strategy</span>
+            </div>
+            <div class="when">seit 09/2025</div>
+          </div>
+          <div class="chips">
+            <span class="btn">Content</span>
+            <span class="btn">Strategie</span>
+            <span class="btn">UX</span>
+            <span class="btn">Kommunikation</span>
+            <span class="btn">Marketing</span>
+            <span class="btn">Enterprise</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="head">
+            <div class="who">
+              <a class="btn link" href="https://www.campus02.at/marketing/bachelor/" target="_blank" rel="noopener">FH Campus 02</a>
+              <span class="btn">Bachelor</span>
+              <span class="btn">Marketing &amp; Sales</span>
+            </div>
+            <div class="when">2018 – 2021</div>
+          </div>
+          <div class="chips">
+            <span class="btn">Marketing</span>
+            <span class="btn">Sales</span>
+            <span class="btn">International</span>
+            <span class="btn">BA-Arbeit: Unterschiede im Social Media Verhalten der Gernerationen Y und Z</span>
+            <span class="btn">Mit gutem Erfolg bestanden</span>
+            <span class="btn">Titel: Bachelor of Arts in Business</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Freizeit -->
+      <div class="section">
+        <h3 class="section-title">Freizeit</h3>
+        <div class="chips">
+          <span class="btn">Lesen</span>
+          <span class="btn">Hörbücher</span>
+          <span class="btn">Wintersport</span>
+          <span class="btn">Bergsport</span>
+          <span class="btn">Reisen</span>
+          <span class="btn">Fotografie</span>
+        </div>
+      </div>
+
+      <!-- Sprachen -->
+      <div class="section">
+        <h3 class="section-title">Sprachen &amp; Zertifikate</h3>
+        <div class="chips">
+          <span class="btn">Deutsch</span>
+          <span class="btn">Englisch</span>
+          <span class="btn">Italienisch</span>
+          <span class="btn">IPMA D</span>
+          <span class="btn">BEC B2</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <span>Stefanie Moser · Digital Marketing · Content Strategy</span>
+    <span>Graz · Österreich</span>
+  </footer>
+</article>
+</body>
+</html>
 
