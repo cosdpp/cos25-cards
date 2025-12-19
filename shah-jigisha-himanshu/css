@@ -1,6 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: sans-serif; line-height: 1.5; color: #333; background: white; }
 .container { max-width: 1200; margin: 0 auto; padding:50;
-.margin:0 auto;
+.margin:0 auto; Centers the block: 0 top/bottom, auto left/right;
+            
             .width: 100%;
 }
