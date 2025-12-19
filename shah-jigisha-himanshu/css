@@ -1,7 +1,10 @@
 { margin: 0; padding: 50; box-sizing: border-box; }
 body { font-family: sans-serif; line-height: 1.5; color: #333; background: white; }
 .container { max-width: 1200; margin: 0 auto; padding:50;
-.margin:50 auto; Centers the block: 0 top/bottom, auto left/right;
-            
-            .width: 100%;
+.container {
+    max-width: 1200px;
+    margin: 0 center; 
+    padding: 0 50px;   
+    box-sizing: border-box; 
+}
 }
