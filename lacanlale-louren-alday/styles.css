@@ -10,7 +10,6 @@ body {
   color: #D5DEE6;
 }
 
-/* HEADER */
 .header {
   background: #e3eaee;
   padding: 40px 20px;
@@ -25,7 +24,6 @@ body {
   gap: 40px;
 }
 
-/* AVATAR */
 .avatar-wrapper {
   background: #ffffff;
   border-radius: 50%;
@@ -39,7 +37,6 @@ body {
   object-fit: cover;
 }
 
-/* HEADER TEXT */
 .header-text h1 {
   font-size: 36px;
   letter-spacing: 3px;
@@ -63,7 +60,6 @@ body {
   text-decoration: underline;
 }
 
-/* CONTENT */
 .content {
   max-width: 900px;
   margin: 40px auto;
@@ -74,7 +70,6 @@ section {
   margin-bottom: 40px;
 }
 
-/* SECTION TITLES */
 h2 {
   font-size: 22px;
   color: #9bb1c7;
@@ -82,7 +77,6 @@ h2 {
   text-transform: capitalize;
 }
 
-/* DIVIDER LINE */
 .divider {
   height: 2px;
   background: #9bb1c7;
@@ -90,7 +84,6 @@ h2 {
   margin: 10px 0 20px;
 }
 
-/* TEXT STYLES */
 .contact p {
   margin-bottom: 12px;
   font-size: 16px;
