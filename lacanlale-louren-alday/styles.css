@@ -105,6 +105,18 @@ h2::after {
   font-weight: normal;
 }
 
+#education h3 {
+  font-size: 14px;      
+  font-weight: 600;
+  margin-bottom: 4px;  
+}
+
+#education p {
+  font-size: 14px;       
+  color: #000;
+  margin-bottom: 16px;   
+}
+
 ul {
   padding-left: 20px;
   margin-bottom: 20px;
