@@ -129,13 +129,6 @@ ul {
 ul li {
   margin-bottom: 6px;
   line-height: 1.5;
+  font-size: 14px;
 }
 
-.skills li {
-  font-size: 12px;
-}
-
-#language li,
-#experience ul li {
-  font-size: 12px;
-}
