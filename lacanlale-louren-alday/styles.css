@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #86ADCF;
+  color: #4D82D1;
   background: #ffffff;
 }
 
@@ -11,7 +11,7 @@ h1, h2, h3, p, ul {
 }
 
 .header {
-  background: #86ADCF;
+  background: #ffffff;
   padding: 40px 0;
   border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px;
@@ -119,6 +119,6 @@ ul li {
 }
 
 .skills li {
-  padding: 6px 12px;
+  padding: 3px 10px;
   font-size: 14px;
 }
