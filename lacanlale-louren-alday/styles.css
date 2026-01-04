@@ -134,3 +134,8 @@ ul li {
 .skills li {
   font-size: 12px;
 }
+
+#language li,
+#experience ul li {
+  font-size: 12px;
+}
