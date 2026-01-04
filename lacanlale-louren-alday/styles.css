@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #4D82D1;
+  color: #000; 
   background: #ffffff;
 }
 
@@ -26,7 +26,7 @@ h1, h2, h3, p, ul {
 }
 
 .avatar-wrapper {
-  background: ##ffffff;
+  background: #ffffff; /* FIXED: removed double ## */
   padding: 10px;
   border-radius: 50%;
 }
@@ -40,19 +40,19 @@ h1, h2, h3, p, ul {
 
 .intro h1 {
   letter-spacing: 4px;
-  color: #444;
+  color: #333;
 }
 
 .title {
-  font-size: 18px;
-  margin: 10px 0 15px;
-  color: #666;
+  font-size: 16px;
+  margin: 8px 0 12px;
+  color: #555;
 }
 
 .nav a {
   text-decoration: none;
-  color: #444;
-  font-size: 15px;
+  color: #333;
+  font-size: 14px;
 }
 
 .nav a:hover {
@@ -65,17 +65,8 @@ h1, h2, h3, p, ul {
   padding: 0 20px;
 }
 
-.contact-list {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.contact-list li {
-  margin-bottom: 10px;
-}
-
 h2 {
-  color: #9bb1c7;
+  color: #4F6A92;
   font-size: 22px;
   margin-top: 40px;
   margin-bottom: 8px;
@@ -85,27 +76,33 @@ h2::after {
   content: "";
   display: block;
   height: 2px;
-  background: #9bb1c7;
-  margin-top: 8px;
+  background: #4F6A92;
+  margin-top: 6px;
   margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
 }
 
 #experience h3 {
   font-size: 18px;
   margin-top: 20px;
-  color: #333;
+  color: #000;
 }
 
-.date {
-  font-size: 14px;
-  color: #777;
-  margin-top: 2px;
-}
-
+.date,
 .role {
-  font-weight: 600;
+  font-size: 14px;
+  color: #666;
   margin-top: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-weight: normal;
 }
 
 ul {
@@ -119,6 +116,5 @@ ul li {
 }
 
 .skills li {
-  padding: 3px 10px;
   font-size: 14px;
 }
