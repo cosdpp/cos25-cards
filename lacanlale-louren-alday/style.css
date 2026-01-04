@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+  background: #fff;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #e3eaee;
+  padding: 40px 0;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+.profile {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.avatar-wrapper {
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  letter-spacing: 3px;
+  color: #444;
+}
+
+.title {
+  font-size: 18px;
+  margin: 10px 0 15px;
+  color: #666;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #9bb1c7;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #9bb1c7;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+#experience h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.date {
+  font-size: 14px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.role {
+  font-weight: 600;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.skills li {
+  display: inline-block;
+  background: #e3eaee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 5px 0;
+  font-size: 14px;
+}
