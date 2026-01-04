@@ -1,22 +1,23 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+  background: #fff;
 }
 
-body {
-  background: #ffffff;
-  color: #D5DEE6;
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   background: #e3eaee;
-  padding: 40px 20px;
-  border-radius: 0 0 80px 80px;
+  padding: 40px 0;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
 }
 
-.header-inner {
+.profile {
   max-width: 900px;
   margin: auto;
   display: flex;
@@ -25,9 +26,9 @@ body {
 }
 
 .avatar-wrapper {
-  background: #ffffff;
-  border-radius: 50%;
+  background: #fff;
   padding: 10px;
+  border-radius: 50%;
 }
 
 .avatar {
@@ -37,78 +38,91 @@ body {
   object-fit: cover;
 }
 
-.header-text h1 {
-  font-size: 36px;
+.intro h1 {
   letter-spacing: 3px;
-  color: #4a4a4a;
+  color: #444;
 }
 
-.job-title {
+.title {
   font-size: 18px;
-  margin: 10px 0 20px;
-  color: #6b6b6b;
+  margin: 10px 0 15px;
+  color: #666;
 }
 
 .nav a {
   text-decoration: none;
-  color:#90AAC2;
+  color: #444;
   font-size: 15px;
-  font-weight: 500;
 }
 
 .nav a:hover {
   text-decoration: underline;
 }
 
-.content {
+.container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-section {
-  margin-bottom: 40px;
+.contact-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 22px;
   color: #9bb1c7;
-  font-weight: 600;
-  text-transform: capitalize;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 8px;
 }
 
-.divider {
+h2::after {
+  content: "";
+  display: block;
   height: 2px;
   background: #9bb1c7;
-  width: 100%;
-  margin: 10px 0 20px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
-.contact p {
-  margin-bottom: 12px;
-  font-size: 16px;
+#experience h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
 }
 
 .date {
   font-size: 14px;
   color: #777;
+  margin-top: 2px;
 }
 
-.company,
-.school {
-  font-weight: bold;
-}
-
-.role,
-.degree {
-  margin: 5px 0;
+.role {
+  font-weight: 600;
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 
 ul {
-  margin-top: 10px;
   padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.skills li {
+  display: inline-block;
+  background: #e3eaee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 5px 0;
+  font-size: 14px;
 }
