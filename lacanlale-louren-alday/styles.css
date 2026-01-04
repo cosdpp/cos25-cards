@@ -26,7 +26,7 @@ h1, h2, h3, p, ul {
 }
 
 .avatar-wrapper {
-  background: #ffffff; /* FIXED: removed double ## */
+  background: #ffffff;
   padding: 10px;
   border-radius: 50%;
 }
@@ -65,14 +65,14 @@ h1, h2, h3, p, ul {
   padding: 0 20px;
 }
 
-h2 {
+section > h2 {
   color: #4F6A92;
   font-size: 22px;
   margin-top: 40px;
   margin-bottom: 8px;
 }
 
-h2::after {
+section > h2::after {
   content: "";
   display: block;
   height: 2px;
@@ -109,6 +109,10 @@ h2::after {
   font-size: 14px;      
   font-weight: 600;
   margin-bottom: 4px;  
+}
+
+#education h3::after {
+  content: none;
 }
 
 #education p {
