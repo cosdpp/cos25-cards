@@ -1,32 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Medvidz Katsiaryna's Card</title>
-    <style>
-      /* Styling */
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Medvidz Katsiaryna</h1>
-    </header>
-    <main>
-      <section aria-labelledby="bio-heading">
-        <h2 id="bio-heading">Bio</h2>
-        <p>About Medvidz Katsiaryna</p>
-      </section>
-      <section aria-labelledby="hobbies-heading">
-        <h2 id="hobbies-heading">Hobbies</h2>
-        <ul><li>Hobby 1</li><li>Hobby 2</li></ul>
-      </section>
-      <section aria-labelledby="workxp-heading">
-        <h2 id="workxp-heading">Work Experience</h2>
-        <ul><li>Job 1</li><li>Job 2</li></ul>
-      </section>
-    </main>
-    <script>
-      /* Scripting */
-    </script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<title>Katsiaryna Medvidz — Marketing & Communication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --grad-main: linear-gradient(135deg, #0f0c08, #3a2c23);
+    --bg-light: #f6f4f2;
+    --accent: #7a5a3a;
+    --dark: #1b1b1b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--dark);
+    line-height: 1.65;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 24px;
+}
+
+/* HERO */
+.hero {
+    background: var(--grad-main);
+    color: #fff;
+    border-radius: 28px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.25);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.hero p {
+    margin: 10px 0 18px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.hero a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 16px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+section {
+    margin-top: 64px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* EXPERIENCE */
+.job {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.job:last-child { margin-bottom: 0; }
+
+.job-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.35;
+    line-height: 1;
+}
+
+.job h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.job a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.job ul {
+    margin: 12px 0 0 18px;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.skill {
+    background: #fff;
+    padding: 18px 22px;
+    border-radius: 16px;
+    font-weight: 500;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+}
+
+/* FOOTER */
+footer {
+    margin: 80px 0 20px;
+    text-align: center;
+    opacity: 0.55;
+}
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero a {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQFbpp_fKC-nsQ/profile-displayphoto-scale_400_400/B4DZpGZ7XqIMAg-/0/1762117794614?e=1769644800&v=beta&t=7VRI--qX2OAXTNrNkpvly8oC9zXcSl8AAZk7bHORoLM" alt="Katsiaryna Medvidz">
+    <div>
+        <h1>Katsiaryna Medvidz</h1>
+        <p>Marketing & Communication · SMM · Content Strategy · Copywriting</p>
+        <a href="mailto:medvidzkacaryna@gmail.com">medvidzkacaryna@gmail.com</a>
+        <a href="tel:+436641476386">+43 664 147 6386</a>
+        <a href="https://www.linkedin.com/in/katsiaryna-medvidz-1a48a931b/" target="_blank">LinkedIn</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<h2>About</h2>
+<div class="card">
+<p>Communications and project management specialist with over four years of experience in SMM and marketing, educational and media content creation, strategy development, and team leadership.</p>
+<p>Experienced in coordinating projects, mentoring students, and adapting complex information into accessible formats within intercultural environments.</p>
+<p>Currently pursuing a Master’s degree in Austria and actively studying German.</p>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+<h2>Experience</h2>
+<div class="card">
+
+<div class="job">
+<div class="job-number">1</div>
+<div>
+<h3>Co-founder & Project Manager — GUTARKA</h3>
+<a href="https://www.instagram.com/gutar_ka/" target="_blank">Instagram →</a>
+<ul>
+<li>Co-created a civic youth media initiative.</li>
+<li>Developed visual identity and content formats.</li>
+<li>Balanced content creation with project management.</li>
+</ul>
+</div>
+</div>
+
+<div class="job">
+<div class="job-number">2</div>
+<div>
+<h3>Editor-in-Chief — The EHU Times</h3>
+<a href="https://www.instagram.com/ehu_times/" target="_blank">Instagram →</a>
+<ul>
+<li>Led student media for over four years.</li>
+<li>Developed content strategies and mentoring systems.</li>
+</ul>
+</div>
+</div>
+
+<div class="job">
+<div class="job-number">3</div>
+<div>
+<h3>Social Media Team Coordinator — The Others</h3>
+<a href="https://www.instagram.com/theothersby/" target="_blank">Instagram →</a>
+<ul>
+<li>Researched youth audience trends in exile.</li>
+<li>Led and coordinated SMM team.</li>
+<li>Produced texts, visuals, and short-form videos.</li>
+</ul>
+</div>
+</div>
+
+<div class="job">
+<div class="job-number">4</div>
+<div>
+<h3>Marketing & Communication Specialist — European Humanities University</h3>
+<a href="https://www.instagram.com/ehuniversity_official/" target="_blank">Instagram →</a>
+<ul>
+<li>Created informational content about student life and integration in Europe.</li>
+<li>Developed promotion and content strategies.</li>
+<li>Tracked KPIs and prepared analytical reports.</li>
+<li>Managed Instagram, Telegram, and YouTube channels.</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+<h2>Education</h2>
+<div class="card">
+<p>
+<strong>Bachelor — European Humanities University</strong><br>
+Media and Communication<br>
+<em>2020–2024</em>
+</p>
+
+<p>
+<strong>Master — FH Joanneum</strong><br>
+Content Strategy<br>
+<em>2025–present</em>
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2>Skills & Tools</h2>
+<div class="skills">
+<div class="skill">Content strategy & storytelling</div>
+<div class="skill">Audience research & trend analysis</div>
+<div class="skill">Project coordination & team management</div>
+<div class="skill">Mentoring & facilitation</div>
+<div class="skill">Intercultural communication</div>
+<div class="skill">KPI tracking & reporting</div>
+<div class="skill">Google Workspace · MS Office</div>
+<div class="skill">Figma · Canva · CapCut</div>
+<div class="skill">Trello · Notion · Miro</div>
+<div class="skill">WordPress</div>
+</div>
+</section>
+
+<footer>
+© Katsiaryna Medvidz
+</footer>
+
+</div>
+</body>
 </html>
