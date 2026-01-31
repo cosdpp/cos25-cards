@@ -20,7 +20,7 @@
 * [Mihalko Matúš](https://cosdpp.github.io/cos25-cards/mihalko-matus/)
 * [Mitrofanov Oleg](https://cosdpp.github.io/cos25-cards/mitrofanov-oleg/)
 * [Mkrtichyan Anahit](https://cosdpp.github.io/cos25-cards/mkrtichyan-anahit/)
-* [Moser Stefanie](https://cosdpp.github.io/cos25-cards/moser-stefanie/)
+* [Moser Stefanie](https://cosdpp.github.io/cos25-cards/moser-stefanie/stefanie_moser.html)
 * [Pfandl Martin](https://cosdpp.github.io/cos25-cards/pfandl-martin/)
 * [Pöhlchen Leonie](https://cosdpp.github.io/cos25-cards/pohlchen-leonie/)
 * [Pschorr Christina Eleonora](https://cosdpp.github.io/cos25-cards/pschorr-christina-eleonora/)
