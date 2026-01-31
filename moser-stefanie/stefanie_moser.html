@@ -1,523 +1,518 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Business Card – Stefanie Moser</title>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Business Card – Stefanie Moser</title>
+ 
+ <style>
+   :root{
+     /* Grundfarben */
+     --bg:#F4EDE6;
+     --card:#F8F2EC;
+     --paper:#FFFDFB;
+ 
+     /* Text */
+     --text:#2F2926;
+     --muted:#5E5450;
+ 
+    /* Akzent Farben */
+    --accent:#7A4A5A;
+    --accent-bg:#E5DAD5;
 
-  <style>
-    :root{
-      /* Grundfarben */
-      --bg:#F4EDE6;
-      --card:#F8F2EC;
-      --paper:#FFFDFB;
+    /* Nicht verlinkte Chips - sind grau/beige */
+    --chip-bg:#DED4CF;
+    --chip-border:#C9BAB5;
+    --chip-text:#3A3431;
 
-      /* Text */
-      --text:#2F2926;
-      --muted:#5E5450;
-
-      /* Akzent (Kontrast) */
-      --accent:#9E6E6E;
-      --accent-bg:#F0DADA;
-
-      /* Nicht verlinkte Chips (heller) */
-      --chip-bg:#EAD3D3;
-      --chip-border:#D9BABA;
-      --chip-text:#3A3431;
-
-      /* Link-Chips (klar erkennbar, aber nicht zu dunkel) */
-      --link-bg:#C28E8E;
-      --link-hover:#AD7777;
-      --link-text:#ffffff;
-      --link-border:rgba(255,255,255,.45);
-
-      /* Linien & Schatten */
-      --line:rgba(47,41,38,.12);
-      --shadow:0 18px 55px rgba(47,41,38,.22);
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      padding:32px;
-      background:
-        radial-gradient(1200px 700px at 18% 12%, rgba(158,110,110,.22), transparent 55%),
-        radial-gradient(900px 550px at 82% 80%, rgba(120,105,98,.16), transparent 60%),
-        var(--bg);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color:var(--text);
-    }
-
-    .card{
-      width:min(1120px, 100%);
-      border-radius:26px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.4));
-    }
-
-    .wrap{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-    }
-    @media (max-width:980px){
-      .wrap{grid-template-columns:1fr}
-    }
-
-    .left,.right{padding:28px}
-
-    .left{
-      background:linear-gradient(180deg, rgba(248,242,236,.98), rgba(240,218,218,.6));
-      border-right:1px solid var(--line);
-    }
-    @media (max-width:980px){
-      .left{border-right:0;border-bottom:1px solid var(--line)}
-    }
-
-    .right{
-      background:linear-gradient(180deg, rgba(255,253,251,.95), rgba(248,242,236,.8));
-    }
-
-    /* Header */
-    .top{
-      display:flex;
-      gap:18px;
-      align-items:center;
-    }
-
-    .avatar{
-      width:112px;
-      height:112px;
-      border-radius:50%;
-      object-fit:cover;
-      border:5px solid var(--accent);
-      box-shadow:0 10px 25px rgba(47,41,38,.15);
-      background:var(--paper);
-      flex:0 0 auto;
-    }
-
-    .titleblock{
-      display:grid;
-      gap:6px;
-      min-width:0;
-    }
-
-    h1{
-      margin:0;
-      font-size:32px;
-      line-height:1.05;
-      letter-spacing:-.02em;
-      color:var(--text);
-    }
-
-    .role{
-      margin:0;
-      font-size:14.5px;
-      color:var(--muted);
-    }
-
-    .quote{
-      margin:14px 0 0;
-      padding:14px 16px;
-      background:var(--accent-bg);
-      border:1px solid rgba(158,110,110,.35);
-      border-left:4px solid var(--accent);
-      border-radius:16px;
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .divider{
-      height:1px;
-      background:var(--line);
-      margin:18px 0;
-    }
-
-    .section{margin:14px 0 0}
-    .section + .section{margin-top:18px}
-
-    .section-title{
-      font-size:11.5px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:var(--muted);
-      display:flex;
-      gap:10px;
-      align-items:center;
-      margin:0 0 10px;
-    }
-    .section-title::after{
-      content:"";
-      flex:1;
-      height:1px;
-      background:linear-gradient(90deg, rgba(47,41,38,.18), transparent);
-    }
-
-    /* Cards */
-    .item{
-      background:rgba(255,253,251,.9);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:14px 16px;
-      box-shadow:0 10px 30px rgba(47,41,38,.08);
-    }
-    .item + .item{margin-top:12px}
-
-    .head{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:flex-start;
-      flex-wrap:wrap;
-      margin-bottom:10px;
-    }
-
-    .who{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      align-items:center;
-      min-width:0;
-    }
-
-    .when{
-      font-size:12.5px;
-      color:var(--muted);
-      white-space:nowrap;
-      padding-top:2px;
-    }
-
-    /* =========================
-       LISTEN statt SPANS
-       ========================= */
-    .chiplist{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      min-width:0;
-    }
-    .chiplist > li{ min-width:0; }
-
-    /* Basis: NICHT verlinkte Chips (heller) */
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:12.5px;
-      line-height:1.15;
-
-      background:var(--chip-bg);
-      color:var(--chip-text);
-      border:1px solid var(--chip-border);
-
-      max-width:100%;
-      min-width:0;
-      user-select:none;
-
-      transition:background .12s ease, border-color .12s ease;
-    }
-
-    /* Kontaktchips mit langen Werten */
-    .chip.contact{
-      max-width:100%;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    /* Verlinkte Chips: deutlich erkennbar + eigener Hover (mit Lift) */
-    a.chip{
-      text-decoration:none;
-      cursor:pointer;
-      color:inherit;
-    }
-
-    a.chip--link{
-      background:var(--link-bg);
-      color:var(--link-text);
-      border:1px solid var(--link-border);
-      box-shadow:0 8px 18px rgba(0,0,0,.12);
-      transition:background .15s ease, transform .1s ease, box-shadow .15s ease;
-      position:relative;
-    }
-
-    a.chip--link::after{
-      content:"↗";
-      font-size:12px;
-      opacity:.85;
-      margin-left:2px;
-    }
-
-    a.chip--link:hover{
-      background:var(--link-hover);
-      transform:translateY(-1px);
-      box-shadow:0 12px 24px rgba(0,0,0,.18);
-    }
-
-    /* Nicht verlinkte Chips: KEIN Zoom, kein Lift */
-    span.chip:hover{
-      transform:none;
-      box-shadow:none;
-      background:var(--chip-bg);
-      border-color:var(--chip-border);
-    }
-
-    /* Mobile: lange Texte umbrechen */
-    @media (max-width:560px){
-      .chip{
-        white-space:normal;
-        overflow-wrap:anywhere;
-      }
-      a.chip--link::after{ margin-left:2px; }
-    }
-
-    .footer{
-      padding:14px 28px 18px;
-      border-top:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      font-size:12px;
-      color:var(--muted);
-      background:rgba(248,242,236,.9);
-    }
-
-    /* =========================
-       MOBILE OPTIMIZATION
-       ========================= */
-    @media (max-width:980px){
-      body{padding:16px;}
-      .left,.right{padding:18px;}
-      .footer{padding:12px 18px 14px;}
-      .when{white-space:normal;}
-    }
-
-    @media (max-width:560px){
-      .top{gap:12px; align-items:flex-start;}
-      .avatar{width:84px;height:84px;border-width:4px;}
-      h1{font-size:26px;}
-      .role{font-size:13.5px;}
-
-      .quote{padding:12px 12px;font-size:13.5px;}
-      .section + .section{margin-top:16px;}
-      .item{padding:12px 12px;}
-      .item + .item{margin-top:10px;}
-
-      .chiplist{gap:6px;}
-      .chip{padding:7px 10px;font-size:12px;}
-
-      .head{gap:8px;margin-bottom:8px;}
-      .who{gap:6px;}
-    }
-
-    @media (max-width:380px){
-      body{padding:12px;}
-      .chip{max-width:100%;}
-      .card{border-radius:20px;}
-    }
-  </style>
+    /* Link-Chips - sind in Akzent Farben*/
+    --link-bg:#8B5A6B;
+    --link-hover:#7A4A5A;
+     --link-text:#ffffff;
+     --link-border:rgba(255,255,255,.45);
+ 
+     /* Linien & Schatten */
+     --line:rgba(47,41,38,.12);
+     --shadow:0 18px 55px rgba(47,41,38,.22);
+   }
+ 
+   * {box-sizing:border-box;}
+ 
+   body{
+     margin:0;
+     min-height:100vh;
+     display:grid;
+     place-items:center;
+     padding:32px;
+    background:
+      radial-gradient(1200px 700px at 18% 12%, rgba(122,74,90,.22), transparent 55%),
+      radial-gradient(900px 550px at 82% 80%, rgba(120,105,98,.16), transparent 60%),
+      var(--bg);
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+     color:var(--text);
+   }
+ 
+   .card{
+     width:min(1120px, 100%);
+     border-radius:26px;
+     overflow:hidden;
+     box-shadow:var(--shadow);
+     border:1px solid var(--line);
+     background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.4));
+   }
+ 
+   .wrap{
+     display:grid;
+     grid-template-columns: 1.15fr .85fr;
+   }
+   @media (max-width:980px){
+     .wrap{grid-template-columns:1fr}
+   }
+ 
+   .left,.right{padding:28px}
+ 
+  .left{
+    background:linear-gradient(180deg, rgba(248,242,236,.98), rgba(229,218,213,.6));
+    border-right:1px solid var(--line);
+  }
+   @media (max-width:980px){
+     .left{border-right:0;border-bottom:1px solid var(--line)}
+   }
+ 
+   .right{
+     background:linear-gradient(180deg, rgba(255,253,251,.95), rgba(248,242,236,.8));
+   }
+ 
+   /* Header Breich*/
+   .top{
+     display:flex;
+     gap:18px;
+     align-items:center;
+   }
+ 
+   .avatar{
+     width:112px;
+     height:112px;
+     border-radius:50%;
+     object-fit:cover;
+     border:5px solid var(--accent);
+     box-shadow:0 10px 25px rgba(47,41,38,.15);
+     background:var(--paper);
+     flex:0 0 auto;
+   }
+ 
+   .titleblock{
+     display:grid;
+     gap:6px;
+     min-width:0;
+   }
+ 
+   h1{
+     margin:0;
+     font-size:32px;
+     line-height:1.05;
+     letter-spacing:-.02em;
+     color:var(--text);
+   }
+ 
+   .role{
+     margin:0;
+     font-size:14.5px;
+     color:var(--muted);
+   }
+ 
+   .quote{
+     margin:14px 0 0;
+     padding:14px 16px;
+     background:var(--accent-bg);
+     border:1px solid rgba(122,74,90,.35);
+     border-left:4px solid var(--accent);
+     border-radius:16px;
+     font-size:14px;
+     line-height:1.55;
+   }
+ 
+   .divider{
+     height:1px;
+     background:var(--line);
+     margin:18px 0;
+   }
+ 
+   .section{margin:14px 0 0}
+   .section + .section{margin-top:18px}
+ 
+   .section-title{
+     font-size:11.5px;
+     letter-spacing:.14em;
+     text-transform:uppercase;
+     color:var(--muted);
+     display:flex;
+     gap:10px;
+     align-items:center;
+     margin:0 0 10px;
+   }
+   .section-title::after{
+     content:"";
+     flex:1;
+     height:1px;
+     background:linear-gradient(90deg, rgba(47,41,38,.18), transparent);
+   }
+ 
+   /* Cards */
+   .item{
+     background:rgba(255,253,251,.9);
+     border:1px solid var(--line);
+     border-radius:18px;
+     padding:14px 16px;
+     box-shadow:0 10px 30px rgba(47,41,38,.08);
+   }
+   .item + .item{margin-top:12px}
+ 
+   .head{
+     display:flex;
+     justify-content:space-between;
+     gap:12px;
+     align-items:flex-start;
+     flex-wrap:wrap;
+     margin-bottom:10px;
+   }
+ 
+   .who{
+     display:flex;
+     flex-wrap:wrap;
+     gap:8px;
+     align-items:center;
+     min-width:0;
+   }
+ 
+   .when{
+     font-size:12.5px;
+     color:var(--muted);
+     white-space:nowrap;
+     padding-top:2px;
+   }
+ 
+   /* Listen */
+   .chiplist{
+     list-style:none;
+     padding:0;
+     margin:0;
+     display:flex;
+     flex-wrap:wrap;
+     gap:8px;
+     min-width:0;
+   }
+   .chiplist > li{ min-width:0; }
+ 
+   /* Basis Chips */
+   .chip{
+     display:inline-flex;
+     align-items:center;
+     gap:6px;
+     padding:8px 12px;
+     border-radius:999px;
+     font-size:12.5px;
+     line-height:1.15;
+ 
+     background:var(--chip-bg);
+     color:var(--chip-text);
+     border:1px solid var(--chip-border);
+ 
+     max-width:100%;
+     min-width:0;
+     user-select:none;
+ 
+     transition:background .12s ease, border-color .12s ease;
+   }
+ 
+   /* Kontaktchips mit langen Werten */
+   .chip.contact{
+     max-width:100%;
+     overflow:hidden;
+     text-overflow:ellipsis;
+   }
+ 
+   /* Verlinkte Chips */
+   a.chip{
+     text-decoration:none;
+     cursor:pointer;
+     color:inherit;
+   }
+ 
+   a.chip--link{
+     background:var(--link-bg);
+     color:var(--link-text);
+     border:1px solid var(--link-border);
+     box-shadow:0 8px 18px rgba(0,0,0,.12);
+     transition:background .15s ease, transform .1s ease, box-shadow .15s ease;
+     position:relative;
+   }
+ 
+   a.chip--link::after{
+     content:"↗";
+     font-size:12px;
+     opacity:.85;
+     margin-left:2px;
+   }
+ 
+   a.chip--link:hover{
+     background:var(--link-hover);
+     transform:translateY(-1px);
+     box-shadow:0 12px 24px rgba(0,0,0,.18);
+   }
+ 
+   /* Nicht verlinkte Chips */
+   span.chip:hover{
+     transform:none;
+     box-shadow:none;
+     background:var(--chip-bg);
+     border-color:var(--chip-border);
+   }
+ 
+   /* Mobile Optimierung */
+   @media (max-width:560px){
+     .chip{
+       white-space:normal;
+       overflow-wrap:anywhere;
+     }
+     a.chip--link::after{ margin-left:2px; }
+   }
+ 
+   .footer{
+     padding:14px 28px 18px;
+     border-top:1px solid var(--line);
+     display:flex;
+     justify-content:space-between;
+     gap:12px;
+     flex-wrap:wrap;
+     font-size:12px;
+     color:var(--muted);
+     background:rgba(248,242,236,.9);
+   }
+ 
+   /* Mobile Optimierung */
+   @media (max-width:980px){
+     body{padding:16px;}
+     .left,.right{padding:18px;}
+     .footer{padding:12px 18px 14px;}
+     .when{white-space:normal;}
+   }
+ 
+   @media (max-width:560px){
+     .top{gap:12px; align-items:flex-start;}
+     .avatar{width:84px;height:84px;border-width:4px;}
+     h1{font-size:26px;}
+     .role{font-size:13.5px;}
+ 
+     .quote{padding:12px 12px;font-size:13.5px;}
+     .section + .section{margin-top:16px;}
+     .item{padding:12px 12px;}
+     .item + .item{margin-top:10px;}
+ 
+     .chiplist{gap:6px;}
+     .chip{padding:7px 10px;font-size:12px;}
+ 
+     .head{gap:8px;margin-bottom:8px;}
+     .who{gap:6px;}
+   }
+ 
+   @media (max-width:380px){
+     body{padding:12px;}
+     .chip{max-width:100%;}
+     .card{border-radius:20px;}
+   }
+ </style>
 </head>
-
+ 
 <body>
 <article class="card">
-  <div class="wrap">
-
-    <!-- LEFT: Name + Kontakt + Work Experience + Expertise -->
+ <div class="wrap">
+ 
     <section class="left">
-      <div class="top">
-        <img src="Stefanie Moser.jpeg" alt="Profilbild Stefanie Moser" class="avatar">
-        <div class="titleblock">
-          <h1>Stefanie Moser, BA</h1>
-          <p class="role">Digital Marketing &amp; E-Commerce · Content Strategy Studentin</p>
-        </div>
-      </div>
-
-      <p class="quote">
-        „Ich verbinde Strategie und Umsetzung – und mache digitale Touchpoints messbar besser: von Content über SEO bis E-Commerce.“
-      </p>
-
-      <div class="divider"></div>
-
-      <div class="section">
-        <h3 class="section-title">Kontakt</h3>
-        <ul class="chiplist">
-          <li><a class="chip chip--link contact" href="tel:+436646491307">Tel · 0664 / 6491307</a></li>
-          <li><a class="chip chip--link contact" href="mailto:stefaniesteiner@hotmail.com">Mail · stefaniesteiner@hotmail.com</a></li>
-          <li><span class="chip">Graz · Österreich</span></li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3 class="section-title">Work Experience</h3>
-
-        <div class="item">
-          <div class="head">
-            <div class="who">
-              <a class="chip chip--link" href="https://wutscher.com/" target="_blank" rel="noopener">sehen!wutscher</a>
-              <span class="chip">E-Commerce</span>
-              <span class="chip">Online Marketing</span>
-            </div>
-            <div class="when">11/2024 – Heute</div>
-          </div>
-          <ul class="chiplist">
-            <li><span class="chip">Onlineshop</span></li>
-            <li><span class="chip">Website</span></li>
-            <li><span class="chip">Shopware</span></li>
-            <li><span class="chip">PIM</span></li>
-            <li><span class="chip">Local SEO &amp; Google Business Profiles</span></li>
-            <li><span class="chip">SEO</span></li>
-            <li><span class="chip">SEA</span></li>
-            <li><span class="chip">Social Media</span></li>
-            <li><span class="chip">Partnermanagement</span></li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="head">
-            <div class="who">
-              <a class="chip chip--link" href="https://ideentriebwerk.com/" target="_blank" rel="noopener">Ideentriebwerk</a>
-              <span class="chip">Head of Marketing</span>
-              <span class="chip">Ehrenamt</span>
-            </div>
-            <div class="when">02/2025 – Heute</div>
-          </div>
-          <ul class="chiplist">
-            <li><span class="chip">Brand</span></li>
-            <li><span class="chip">Strategie</span></li>
-            <li><span class="chip">SEO</span></li>
-            <li><span class="chip">Website</span></li>
-            <li><span class="chip">Social</span></li>
-            <li><span class="chip">Newsletter</span></li>
-            <li><span class="chip">Teamleader of 5</span></li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="head">
-            <div class="who">
-              <a class="chip chip--link" href="https://www.fronius.com/de/solarenergie/eigenheim" target="_blank" rel="noopener">Fronius</a>
-              <span class="chip">Digital Marketing</span>
-              <span class="chip">Solar Energy</span>
-            </div>
-            <div class="when">03/2019 – 10/2024</div>
-          </div>
-          <ul class="chiplist">
-            <li><span class="chip">Websites</span></li>
-            <li><span class="chip">Microsites</span></li>
-            <li><span class="chip">Landingpages</span></li>
-            <li><span class="chip">SEO</span></li>
-            <li><span class="chip">PIM</span></li>
-            <li><span class="chip">CMS</span></li>
-            <li><span class="chip">SharePoint</span></li>
-            <li><span class="chip">Website-Relaunches</span></li>
-            <li><span class="chip">Blog</span></li>
-            <li><span class="chip">Events</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="section">
-        <h3 class="section-title">Expertise</h3>
-        <ul class="chiplist">
-          <li><span class="chip">SEO</span></li>
-          <li><span class="chip">SEA</span></li>
-          <li><span class="chip">Shopware</span></li>
-          <li><span class="chip">PIM</span></li>
-          <li><span class="chip">Produktdaten</span></li>
-          <li><span class="chip">Sitecore</span></li>
-          <li><span class="chip">Analytics</span></li>
-          <li><span class="chip">Content Creation</span></li>
-          <li><span class="chip">Social Media</span></li>
-          <li><span class="chip">Brevo &amp; Mailchimp</span></li>
-          <li><span class="chip">MS Office</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RIGHT: Education + Freizeit -->
-    <section class="right">
-      <div class="section">
-        <h3 class="section-title">Ausbildung</h3>
-
-        <div class="item">
-          <div class="head">
-            <div class="who">
-              <a class="chip chip--link" href="https://www.fh-joanneum.at/content-strategie-und-digitale-kommunikation/master/" target="_blank" rel="noopener">FH JOANNEUM</a>
-              <span class="chip">Master</span>
-              <span class="chip">Content Strategy</span>
-            </div>
-            <div class="when">seit 09/2025</div>
-          </div>
-          <ul class="chiplist">
-            <li><span class="chip">Content</span></li>
-            <li><span class="chip">Strategie</span></li>
-            <li><span class="chip">UX</span></li>
-            <li><span class="chip">Kommunikation</span></li>
-            <li><span class="chip">Marketing</span></li>
-            <li><span class="chip">Enterprise</span></li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="head">
-            <div class="who">
-              <a class="chip chip--link" href="https://www.campus02.at/marketing/bachelor/" target="_blank" rel="noopener">FH Campus 02</a>
-              <span class="chip">Bachelor</span>
-              <span class="chip">Marketing &amp; Sales</span>
-            </div>
-            <div class="when">2018 – 2021</div>
-          </div>
-          <ul class="chiplist">
-            <li><span class="chip">Marketing</span></li>
-            <li><span class="chip">Sales</span></li>
-            <li><span class="chip">International</span></li>
-            <li><span class="chip">BA-Arbeit: Unterschiede im Social Media Verhalten der Gernerationen Y und Z</span></li>
-            <li><span class="chip">Mit gutem Erfolg bestanden</span></li>
-            <li><span class="chip">Titel: Bachelor of Arts in Business</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="section">
-        <h3 class="section-title">Freizeit</h3>
-        <ul class="chiplist">
-          <li><span class="chip">Lesen</span></li>
-          <li><span class="chip">Hörbücher</span></li>
-          <li><span class="chip">Wintersport</span></li>
-          <li><span class="chip">Bergsport</span></li>
-          <li><span class="chip">Reisen</span></li>
-          <li><span class="chip">Fotografie</span></li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3 class="section-title">Sprachen &amp; Zertifikate</h3>
-        <ul class="chiplist">
-          <li><span class="chip">Deutsch</span></li>
-          <li><span class="chip">Englisch</span></li>
-          <li><span class="chip">Italienisch</span></li>
-          <li><span class="chip">IPMA D</span></li>
-          <li><span class="chip">BEC B2</span></li>
-        </ul>
-      </div>
-    </section>
-
-  </div>
-
-  <footer class="footer">
-    <span>Stefanie Moser · Digital Marketing · Content Strategy</span>
-    <span>Graz · Österreich</span>
-  </footer>
+     <div class="top">
+       <img src="Stefanie Moser.jpeg" alt="Profilbild Stefanie Moser" class="avatar">
+       <div class="titleblock">
+         <h1>Stefanie Moser, BA</h1>
+         <p class="role">Digital Marketing &amp; E-Commerce · Content Strategy Studentin</p>
+       </div>
+     </div>
+ 
+     <p class="quote">
+       „Ich verbinde Strategie und Umsetzung – und mache digitale Touchpoints messbar besser: von Content über SEO bis E-Commerce.“
+     </p>
+ 
+     <div class="divider"></div>
+ 
+     <div class="section">
+       <h3 class="section-title">Kontakt</h3>
+       <ul class="chiplist">
+         <li><a class="chip chip--link contact" href="tel:+436646491307">Tel · 0664 / 6491307</a></li>
+         <li><a class="chip chip--link contact" href="mailto:stefaniesteiner@hotmail.com">Mail · stefaniesteiner@hotmail.com</a></li>
+         <li><span class="chip">Graz · Österreich</span></li>
+       </ul>
+     </div>
+ 
+     <div class="section">
+       <h3 class="section-title">Work Experience</h3>
+ 
+       <div class="item">
+         <div class="head">
+           <div class="who">
+             <a class="chip chip--link" href="https://wutscher.com/" target="_blank" rel="noopener">sehen!wutscher</a>
+             <span class="chip">E-Commerce</span>
+             <span class="chip">Online Marketing</span>
+           </div>
+           <div class="when">11/2024 – Heute</div>
+         </div>
+         <ul class="chiplist">
+           <li><span class="chip">Onlineshop</span></li>
+           <li><span class="chip">Website</span></li>
+           <li><span class="chip">Shopware</span></li>
+           <li><span class="chip">PIM</span></li>
+           <li><span class="chip">Local SEO &amp; Google Business Profiles</span></li>
+           <li><span class="chip">SEO</span></li>
+           <li><span class="chip">SEA</span></li>
+           <li><span class="chip">Social Media</span></li>
+           <li><span class="chip">Partnermanagement</span></li>
+         </ul>
+       </div>
+ 
+       <div class="item">
+         <div class="head">
+           <div class="who">
+             <a class="chip chip--link" href="https://ideentriebwerk.com/" target="_blank" rel="noopener">Ideentriebwerk</a>
+             <span class="chip">Head of Marketing</span>
+             <span class="chip">Ehrenamt</span>
+           </div>
+           <div class="when">02/2025 – Heute</div>
+         </div>
+         <ul class="chiplist">
+           <li><span class="chip">Brand</span></li>
+           <li><span class="chip">Strategie</span></li>
+           <li><span class="chip">SEO</span></li>
+           <li><span class="chip">Website</span></li>
+           <li><span class="chip">Social</span></li>
+           <li><span class="chip">Newsletter</span></li>
+           <li><span class="chip">Teamleader of 5</span></li>
+         </ul>
+       </div>
+ 
+       <div class="item">
+         <div class="head">
+           <div class="who">
+             <a class="chip chip--link" href="https://www.fronius.com/de/solarenergie/eigenheim" target="_blank" rel="noopener">Fronius</a>
+             <span class="chip">Digital Marketing</span>
+             <span class="chip">Solar Energy</span>
+           </div>
+           <div class="when">03/2019 – 10/2024</div>
+         </div>
+         <ul class="chiplist">
+           <li><span class="chip">Websites</span></li>
+           <li><span class="chip">Microsites</span></li>
+           <li><span class="chip">Landingpages</span></li>
+           <li><span class="chip">SEO</span></li>
+           <li><span class="chip">PIM</span></li>
+           <li><span class="chip">CMS</span></li>
+           <li><span class="chip">SharePoint</span></li>
+           <li><span class="chip">Website-Relaunches</span></li>
+           <li><span class="chip">Blog</span></li>
+           <li><span class="chip">Events</span></li>
+         </ul>
+       </div>
+     </div>
+ 
+     <div class="section">
+       <h3 class="section-title">Expertise</h3>
+       <ul class="chiplist">
+         <li><span class="chip">SEO</span></li>
+         <li><span class="chip">SEA</span></li>
+         <li><span class="chip">Shopware</span></li>
+         <li><span class="chip">PIM</span></li>
+         <li><span class="chip">Produktdaten</span></li>
+         <li><span class="chip">Sitecore</span></li>
+         <li><span class="chip">Analytics</span></li>
+         <li><span class="chip">Content Creation</span></li>
+         <li><span class="chip">Social Media</span></li>
+         <li><span class="chip">Brevo &amp; Mailchimp</span></li>
+         <li><span class="chip">MS Office</span></li>
+       </ul>
+     </div>
+   </section>
+ 
+   <section class="right">
+     <div class="section">
+       <h3 class="section-title">Ausbildung</h3>
+ 
+       <div class="item">
+         <div class="head">
+           <div class="who">
+             <a class="chip chip--link" href="https://www.fh-joanneum.at/content-strategie-und-digitale-kommunikation/master/" target="_blank" rel="noopener">FH JOANNEUM</a>
+             <span class="chip">Master</span>
+             <span class="chip">Content Strategy</span>
+           </div>
+           <div class="when">seit 09/2025</div>
+         </div>
+         <ul class="chiplist">
+           <li><span class="chip">Content</span></li>
+           <li><span class="chip">Strategie</span></li>
+           <li><span class="chip">UX</span></li>
+           <li><span class="chip">Kommunikation</span></li>
+           <li><span class="chip">Marketing</span></li>
+           <li><span class="chip">Enterprise</span></li>
+         </ul>
+       </div>
+ 
+       <div class="item">
+         <div class="head">
+           <div class="who">
+             <a class="chip chip--link" href="https://www.campus02.at/marketing/bachelor/" target="_blank" rel="noopener">FH Campus 02</a>
+             <span class="chip">Bachelor</span>
+             <span class="chip">Marketing &amp; Sales</span>
+           </div>
+           <div class="when">2018 – 2021</div>
+         </div>
+         <ul class="chiplist">
+           <li><span class="chip">Marketing</span></li>
+           <li><span class="chip">Sales</span></li>
+           <li><span class="chip">International</span></li>
+           <li><span class="chip">BA-Arbeit: Unterschiede im Social Media Verhalten der Gernerationen Y und Z</span></li>
+           <li><span class="chip">Mit gutem Erfolg bestanden</span></li>
+           <li><span class="chip">Titel: Bachelor of Arts in Business</span></li>
+         </ul>
+       </div>
+     </div>
+ 
+     <div class="section">
+       <h3 class="section-title">Freizeit</h3>
+       <ul class="chiplist">
+         <li><span class="chip">Lesen</span></li>
+         <li><span class="chip">Hörbücher</span></li>
+         <li><span class="chip">Wintersport</span></li>
+         <li><span class="chip">Bergsport</span></li>
+         <li><span class="chip">Reisen</span></li>
+         <li><span class="chip">Fotografie</span></li>
+       </ul>
+     </div>
+ 
+     <div class="section">
+       <h3 class="section-title">Sprachen &amp; Zertifikate</h3>
+       <ul class="chiplist">
+         <li><span class="chip">Deutsch</span></li>
+         <li><span class="chip">Englisch</span></li>
+         <li><span class="chip">Italienisch</span></li>
+         <li><span class="chip">IPMA D</span></li>
+         <li><span class="chip">BEC B2</span></li>
+       </ul>
+     </div>
+   </section>
+ 
+ </div>
+ 
+ <footer class="footer">
+   <span>Stefanie Moser · Digital Marketing · Content Strategy</span>
+   <span>Graz · Österreich</span>
+ </footer>
 </article>
 </body>
 </html>
+ 
