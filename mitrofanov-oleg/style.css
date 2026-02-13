@@ -1,0 +1,125 @@
+.page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+    padding: 60px 20px;
+    background-color: #5c5c5c;
+    text-align: center;
+    color: white;  
+    border-bottom: 4px solid #444;
+}
+
+.header__avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    background-color: #ccc;
+}
+
+.main {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.firstText, .services, .experience, .education {
+    padding: 50px 70px;
+    border-bottom: 1px solid #eee;
+}
+
+.title {
+    color: #5c5c5c;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+}
+
+.services__list, .experience__list {
+    list-style: none;
+    padding: 0;
+}
+
+.services__list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.services__list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #5c5c5c;
+}
+
+.experience__item {
+    margin-bottom: 30px;
+}
+
+.experience__item-title {
+    margin-bottom: 5px;
+    font-size: 1.15em;
+    color: #222;
+}
+
+.experience__item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.map {
+    margin-top: 30px;
+    height: 300px;
+    width: 100%;
+    filter: grayscale(1) opacity(0.8);
+    border-radius: 8px;
+}
+
+.footer {
+    padding: 70px;
+    background-color: #5c5c5c;
+    color: white;
+    text-align: center;
+}
+
+.title_type_footer {
+    color: white;
+}
+
+.footer__column-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px transparent solid;
+    transition: border-bottom 0.3s;
+}
+
+.link:hover {
+    border-bottom: 1px solid white;
+}
+
+.footer__email, .footer__location {
+    font-size: 0.95em;
+    opacity: 0.9;
+    margin: 5px 0;
+}
