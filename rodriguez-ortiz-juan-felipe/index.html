@@ -1,32 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Rodriguez Ortiz Juan Felipe's Card</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Business Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-      /* Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            width: 350px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center; /* Center everything for a modern look */
+        }
+        /* Profile Image Styling */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+        
+            border-radius: 50%; /* Makes the image a circle */
+            object-fit: cover;
+            border: 3px solid #0078d4;
+            margin-bottom: 15px;
+        }
+        h1 { margin: 10px 0 5px 0; color: #333; }
+        h3 { color: #0078d4; font-size: 1.1rem; margin-top: 20px; }
+        p, li { font-size: 0.9rem; color: #555; text-align: left; }
+        
+        /* Social Icons Styling */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-links a {
+            color: #0078d4;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .social-links a:hover {
+            transform: scale(1.2); /* Slight grow effect on hover */
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Rodriguez Ortiz Juan Felipe</h1>
-    </header>
-    <main>
-      <section aria-labelledby="bio-heading">
-        <h2 id="bio-heading">Bio</h2>
-        <p>About Rodriguez Ortiz Juan Felipe</p>
-      </section>
-      <section aria-labelledby="hobbies-heading">
-        <h2 id="hobbies-heading">Hobbies</h2>
-        <ul><li>Hobby 1</li><li>Hobby 2</li></ul>
-      </section>
-      <section aria-labelledby="workxp-heading">
-        <h2 id="workxp-heading">Work Experience</h2>
-        <ul><li>Job 1</li><li>Job 2</li></ul>
-      </section>
+</head>
+<body>
+
+    <main class="card">
+        <img src="FelipeRO-Avatar.jpeg" alt="Felipe's Profile" class="profile-img">
+
+        <header>
+            <h1>Felipe Rodriguez Ortiz</h1>
+            <p style="text-align: center;">Creative Media Storyteller</p>
+        </header>
+
+        <section>
+            <h3>About Me</h3>
+            <p>Creative Media storyteller with 12+ years of experience crafting visual narratives that connect — from cinematic projects to digital and short-form storytelling. Skilled in narrative structure, visual analysis, pacing, and refining content with a strong eye for clarity, emotion, and meaning.</p>
+        </section>
+
+        <section>
+            <h3>Projects & Experience</h3>
+            
+            <div class="entry">
+                <p><strong>Indigo Slate, US, Video Editor</strong></p>
+                <p>Developed visual story arcs across multiple short- and long-form formats, from explainers to cinematic ads. 
+Edited cinematic brand and narrative-driven projects for Microsoft, Amazon, and SKY, ensuring clarity, pacing, and authenticity.</p>
+            </div>
+
+            <div class="entry">
+                <p><strong>RTVC, Colombia, Conceptual television editor</strong></p>
+                <p>Balanced multiple projects simultaneously, combining creative instincts with efficiency</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Education</h3>
+            
+            <div class="entry">
+                <p><strong>FH JOANNEUM - University of Applied Sciences</strong></p>
+                <p><em>Content Strategy | Sept 2025 - Dec 2027</em></p>
+                <p>Currently learning the fundamentals of Content Strategy</p>
+            </div>
+        </section>
+
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:yourname@email.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </main>
-    <script>
-      /* Scripting */
-    </script>
-  </body>
+
+</body>
 </html>
